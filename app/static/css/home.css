@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f7f9fc;
+    color: #1e2a3a;
+    height: 100vh;
+}
+
+/*MENU LATERAL*/
+.menu {
+    background: linear-gradient(135deg, #1c3faa, #7a5af8);
+
+    width: 240px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: #fff;
+}
+
+.menu h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.menu button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #dbe7ff;
+    font-size: 15px;
+    text-align: left;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu button:hover,
+.menu button.active {
+    background-color: #1c4fd1;
+    color: #fff;
+}
+
+
+header {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 240px; /* se tiver sidebar, mantenha */
+  right: 0;
+  z-index: 10;
+}
+
+/* Cabeçalho geral: distribui os itens horizontalmente */
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Bloco da logo + título */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* espaço entre a logo e o texto */
+}
+
+/* Logo redonda e proporcional */
+#img-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0b3c91;
+  box-shadow: 0 0 6px rgba(11, 60, 145, 0.2);
+}
+
+/* Título do portal */
+#h2-cab {
+  font-size: 20px;
+  color: #0b3c91;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Botão de logout à direita */
+.btn-logout {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-logout:hover {
+  color: #c0392b;
+  transform: scale(1.05);
+}
+
+/*CONTEÚDO */
+main {
+    flex: 1;
+    padding: 30px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*SAUDAÇÃO*/
+.saudacao-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#saudacao {
+    font-size: 22px;
+    color: #0b3c91;
+    font-weight: 600;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/*RELÓGIO*/
+.relogio {
+    background: linear-gradient(135deg, #1c3faa, #7a5af8);
+
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.relogio h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.contador {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+.relogio p {
+    font-size: 14px;
+    color: #e2e2e2;
+    margin-bottom: 25px;
+}
+
+.relogio button {
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 30px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.relogio button:first-of-type {
+    background-color: #fff;
+    color: #1c3faa;
+}
+
+.relogio button:last-of-type {
+    background-color: #36b5ff;
+    color: #fff;
+}
+
+.relogio button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    header {
+        position: relative;
+        left: 0;
+    }
+
+    .ponto {
+        margin-top: 40px;
+    }
+
+    .relogio {
+        width: 100%;
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
