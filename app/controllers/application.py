@@ -19,7 +19,8 @@ class Application():
 
 
     def helper(self):
-        return template('app/views/html/helper')
+        return template('app/views/html/helper.tpl')
+
 
     def home(self):
         return template('app/views/html/home.tpl')

@@ -16,7 +16,7 @@ def serve_static(filepath):
 
 
 @app.route('/')
-@app.route('/helper')
+@app.route('helper')
 def action_helper(info= None):
     return ctl.render('helper')
 

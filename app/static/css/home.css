@@ -12,7 +12,7 @@ body {
     height: 100vh;
 }
 
-/*MENU LATERAL*/
+
 .menu {
     background: linear-gradient(135deg, #1c3faa, #7a5af8);
 
@@ -59,26 +59,26 @@ header {
   padding: 15px 40px;
   position: fixed;
   top: 0;
-  left: 240px; /* se tiver sidebar, mantenha */
+  left: 240px; 
   right: 0;
   z-index: 10;
 }
 
-/* Cabeçalho geral: distribui os itens horizontalmente */
+
 .cabecalho {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* Bloco da logo + título */
+
 .logo {
   display: flex;
   align-items: center;
-  gap: 15px; /* espaço entre a logo e o texto */
+  gap: 15px; 
 }
 
-/* Logo redonda e proporcional */
+
 #img-logo {
   width: 48px;
   height: 48px;
@@ -88,7 +88,7 @@ header {
   box-shadow: 0 0 6px rgba(11, 60, 145, 0.2);
 }
 
-/* Título do portal */
+
 #h2-cab {
   font-size: 20px;
   color: #0b3c91;
@@ -96,7 +96,7 @@ header {
   margin: 0;
 }
 
-/* Botão de logout à direita */
+
 .btn-logout {
   background: none;
   border: none;
@@ -112,7 +112,7 @@ header {
   transform: scale(1.05);
 }
 
-/*CONTEÚDO */
+
 main {
     flex: 1;
     padding: 30px;
@@ -122,7 +122,7 @@ main {
     align-items: center;
 }
 
-/*SAUDAÇÃO*/
+
 .saudacao-container {
     text-align: center;
     margin-bottom: 30px;
@@ -140,7 +140,7 @@ main {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/*RELÓGIO*/
+
 .relogio {
     background: linear-gradient(135deg, #1c3faa, #7a5af8);
 
